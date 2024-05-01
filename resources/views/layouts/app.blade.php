@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} @hasSection('title') - @yield('title') @endif</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -26,11 +26,14 @@
     <x-banner />
     
     <div :class="{'sm:ml-[280px]': ! close, 'left-0': close}" class="min-h-screen sm:ml-[280px] transition-all duration-300">
-        @livewire('navigation-menu')
+        @livewire('navigation-menu')        
 
         <!-- Page Content -->
         @livewire('SidebarNavigation')
         <main>
+            @slot('header')
+                {{ $header ?? '' }}
+            @endslot
             {{ $slot }}
         </main>
     </div>
