@@ -20,6 +20,35 @@ class UserSeeder extends Seeder
             'password' => bcrypt('admin123'),
             'created_at' => now(),
             'updated_at' => now()
+        ]);       
+
+        DB::table('users')->insert([
+            'name' => 'Teacher',
+            'role' => 'teacher',
+            'email' => 'teacher@gmail.com',
+            'password' => bcrypt('teacher123'),
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'Student',
+            'role' => 'student',
+            'email' => 'student@gmail.com',
+            'password' => bcrypt('student123'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        // for ($i = 1; $i <= 5; $i++) {
+        //     DB::table('users')->insert([
+        //         'name' => 'User ' . $i,
+        //         'role' => 'student',
+        //         'email' => 'user' . $i . '@gmail.com',
+        //         'password' => bcrypt('user123'),
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ]);
+        // }
     }
 }

@@ -7,21 +7,28 @@
 <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="overflow-hidden ">
-            <form wire:submit.prevent="store">
-                <input type="text" wire:model="name" placeholder="Name" required>
-                <input type="email" wire:model="email" placeholder="Email" required>
-                <select wire:model="selectedRoleId">
-                    <option value="">Select Role</option>
-                    @foreach($roles as $role)
-                    <option value="{{ $role->id }}">{{ $role->name }}</option>
-                    @endforeach
-                </select>
-                <button type="submit">Create User</button>
-            </form>
-            <div>
+            @if (session('message'))
+            @livewire('alert-message')
+            @endif
+
+            <button
+                wire:click="$dispatch('openModal', {component: 'create-user'})">
+                Add new user
+            </button>
+
+            <div class="flex flex-col gap-5 mt-5">
                 @foreach($users as $user)
-                <div>
-                    <p>{{ $user->name }} - {{ $user->email }}</p>
+                <div class="border border-slate-400 p-5">
+                    <p>Nombre: {{ $user->name }}</p>
+                    <p>Email: {{ $user->email }}</p>
+                    <p>Role: {{ $user->role }}</p>
+                    <button
+                        wire:click="$dispatch('openModal', {component: 'update-user', arguments: {'user': {{$user->id}}}})">
+                        Edit
+                    <button
+                        wire:click="$dispatch('openModal', {component: 'delete-user', arguments: {'user': {{$user->id}}}})">
+                        Delete
+                    </button>
                 </div>
                 @endforeach
             </div>
