@@ -40,7 +40,7 @@ class UserSeeder extends Seeder
             'updated_at' => now()
         ]);
 
-        // for ($i = 1; $i <= 5; $i++) {
+        // for ($i = 1; $i <= 20; $i++) {
         //     DB::table('users')->insert([
         //         'name' => 'User ' . $i,
         //         'role' => 'student',

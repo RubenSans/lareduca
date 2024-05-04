@@ -12,6 +12,7 @@
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.0",
+        "ramonrietdijk/livewire-tables": "^4.1",
         "spatie/laravel-permission": "^6.7",
         "wire-elements/modal": "^2.0"
     },

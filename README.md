@@ -11,3 +11,5 @@ modificar components.layout
 php artisan migrate:fresh --seed
 
 maybe composer require wire-elements/modal
+
+composer require ramonrietdijk/livewire-tables

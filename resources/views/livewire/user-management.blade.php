@@ -16,7 +16,7 @@
             </div>
 
             <!-- Users list -->
-            @livewire('table', ['users' => $users])
+            <livewire:users-table/>            
         </div>
     </div>
 </div>
