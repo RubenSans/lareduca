@@ -8,9 +8,9 @@
     </div>
     <div class="flex flex-col divide-y-[2px] divide-slate-400 gap-5">
         <ul>
-            <a href="#" class="leading-[30px] font-medium text-[16px]">
+            <a href="courses" class="leading-[30px] font-medium text-[16px]">
                 <li
-                    class="{{ request()->routeIs('') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
+                    class="{{ request()->routeIs('courses') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
                     <svg class="mx-2" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M10 18.9C9.75002 18.9 9.50002 18.8417 9.29169 18.725C7.73335 17.875 4.99169 16.975 3.27502 16.75L3.03335 16.7167C1.94169 16.5833 1.04169 15.5583 1.04169 14.45V4.38332C1.04169 3.72499 1.30002 3.12499 1.77502 2.69165C2.25002 2.25832 2.86669 2.04999 3.51669 2.10832C5.35002 2.24999 8.11669 3.16665 9.68335 4.14999L9.88335 4.26665C9.94169 4.29999 10.0667 4.29999 10.1167 4.27499L10.25 4.19165C11.8167 3.20832 14.5834 2.27499 16.425 2.11665C16.4417 2.11665 16.5084 2.11665 16.525 2.11665C17.1334 2.05832 17.7584 2.27499 18.225 2.70832C18.7 3.14165 18.9584 3.74165 18.9584 4.39999V14.4583C18.9584 15.575 18.0584 16.5917 16.9584 16.725L16.6834 16.7583C14.9667 16.9833 12.2167 17.8917 10.6917 18.7333C10.4917 18.85 10.25 18.9 10 18.9ZM3.31669 3.34999C3.05002 3.34999 2.80835 3.44165 2.61669 3.61665C2.40835 3.80832 2.29169 4.08332 2.29169 4.38332V14.45C2.29169 14.9417 2.71669 15.4167 3.19169 15.4833L3.44169 15.5167C5.31669 15.7667 8.19169 16.7083 9.85835 17.6167C9.93335 17.65 10.0417 17.6583 10.0834 17.6417C11.75 16.7167 14.6417 15.7667 16.525 15.5167L16.8084 15.4833C17.2834 15.425 17.7084 14.9417 17.7084 14.45V4.39165C17.7084 4.08332 17.5917 3.81665 17.3834 3.61665C17.1667 3.42499 16.8917 3.33332 16.5834 3.34999C16.5667 3.34999 16.5 3.34999 16.4834 3.34999C14.8917 3.49165 12.325 4.34999 10.925 5.22499L10.7917 5.31665C10.3334 5.59999 9.68335 5.59999 9.24169 5.32499L9.04169 5.20832C7.61669 4.33332 5.05002 3.48332 3.41669 3.34999C3.38335 3.34999 3.35002 3.34999 3.31669 3.34999Z" />
@@ -24,9 +24,9 @@
                     Courses
                 </li>
             </a>
-            <a href="#" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
+            <a href="lareduca-games" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
                 <li
-                    class="{{ request()->routeIs('') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
+                    class="{{ request()->routeIs('lareduca-games') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
                     <svg class="mx-2 hover:fill-blue-600" width="20" height="20" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -40,9 +40,9 @@
                     Games
                 </li>
             </a>
-            <a href="#" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
+            <a href="calendar" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
                 <li
-                    class="{{ request()->routeIs('') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
+                    class="{{ request()->routeIs('calendar') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
                     <svg class="mx-2" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M6.66669 5.29166C6.32502 5.29166 6.04169 5.00832 6.04169 4.66666V2.16666C6.04169 1.82499 6.32502 1.54166 6.66669 1.54166C7.00835 1.54166 7.29169 1.82499 7.29169 2.16666V4.66666C7.29169 5.00832 7.00835 5.29166 6.66669 5.29166Z" />
@@ -62,9 +62,9 @@
                     Calendar
                 </li>
             </a>
-            <a href="#" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
+            <a href="grades" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
                 <li
-                    class="{{ request()->routeIs('') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
+                    class="{{ request()->routeIs('grades') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
                     <svg class="mx-2" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M13.175 17.3167C12.9583 17.3167 12.7333 17.3083 12.4917 17.2833C12.0583 17.25 11.5667 17.1667 11.0583 17.0417L9.65833 16.7083C5.81667 15.8 4.55833 13.7667 5.45833 9.93334L6.275 6.44167C6.45833 5.65001 6.675 5.00834 6.94167 4.47501C8.375 1.51667 11.1167 1.78334 13.0667 2.24167L14.4583 2.56667C16.4083 3.02501 17.6417 3.75001 18.3333 4.85834C19.0167 5.96667 19.125 7.39167 18.6667 9.34167L17.85 12.825C17.1333 15.875 15.6417 17.3167 13.175 17.3167ZM10.9333 3.20834C9.54167 3.20834 8.65833 3.78334 8.06667 5.01667C7.85 5.46667 7.65833 6.02501 7.49167 6.72501L6.675 10.2167C5.93333 13.3667 6.79167 14.7417 9.94167 15.4917L11.3417 15.825C11.7917 15.9333 12.2167 16 12.6 16.0333C14.8667 16.2583 15.9917 15.2667 16.625 12.5417L17.4417 9.05834C17.8167 7.45001 17.7667 6.32501 17.2667 5.51667C16.7667 4.70834 15.7833 4.15834 14.1667 3.78334L12.775 3.45834C12.0833 3.29167 11.4667 3.20834 10.9333 3.20834Z" />
@@ -97,9 +97,9 @@
             </a>
         </ul>
         <ul class="pt-5">
-            <a href="#" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
+            <a href="{{ route('profile.show') }}" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
                 <li
-                    class="{{ request()->routeIs('') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
+                    class="{{ request()->routeIs('profile.show') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
                     <svg class="mx-2" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M10 13.625C8.27502 13.625 6.87502 12.225 6.87502 10.5C6.87502 8.77502 8.27502 7.37501 10 7.37501C11.725 7.37501 13.125 8.77502 13.125 10.5C13.125 12.225 11.725 13.625 10 13.625ZM10 8.62501C8.96669 8.62501 8.12502 9.46668 8.12502 10.5C8.12502 11.5333 8.96669 12.375 10 12.375C11.0334 12.375 11.875 11.5333 11.875 10.5C11.875 9.46668 11.0334 8.62501 10 8.62501Z" />
@@ -109,9 +109,9 @@
                     Settings
                 </li>
             </a>
-            <a href="#" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
+            <a href="support" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
                 <li
-                    class="{{ request()->routeIs('') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
+                    class="{{ request()->routeIs('support') ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
                     <svg class="mx-2" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8.32501 18.9833C7.82501 18.9833 7.35001 18.7333 7.02501 18.2917L6.02503 16.9583C6.02503 16.9667 5.98336 16.9417 5.96669 16.9417H5.65836C2.80836 16.9417 1.04169 16.1667 1.04169 12.325V8.99167C1.04169 5.48334 3.18336 4.56667 4.98336 4.40834C5.18336 4.38334 5.41669 4.375 5.65836 4.375H10.9917C14.0084 4.375 15.6084 5.97501 15.6084 8.99167V12.325C15.6084 12.5667 15.6 12.8 15.5667 13.025C15.4167 14.8 14.5 16.9417 10.9917 16.9417H10.6584L9.62501 18.2917C9.30001 18.7333 8.82501 18.9833 8.32501 18.9833ZM5.65836 5.625C5.46669 5.625 5.28336 5.63333 5.10836 5.65C3.17502 5.81667 2.29169 6.87501 2.29169 8.99167V12.325C2.29169 15.1833 3.17503 15.6917 5.65836 15.6917H5.99169C6.36669 15.6917 6.79168 15.9 7.02501 16.2L8.02502 17.5417C8.20836 17.7917 8.44169 17.7917 8.62503 17.5417L9.62501 16.2083C9.86668 15.8833 10.25 15.6917 10.6584 15.6917H10.9917C13.1084 15.6917 14.1667 14.8 14.325 12.9C14.35 12.7 14.3584 12.5167 14.3584 12.325V8.99167C14.3584 6.66667 13.3167 5.625 10.9917 5.625H5.65836V5.625Z" />

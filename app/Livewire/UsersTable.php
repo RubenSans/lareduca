@@ -5,11 +5,8 @@ namespace App\Livewire;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Enumerable;
-use Psy\Readline\Hoa\Console;
 use RamonRietdijk\LivewireTables\Actions\Action;
 use RamonRietdijk\LivewireTables\Columns\Column;
-use RamonRietdijk\LivewireTables\Columns\DateColumn;
-use RamonRietdijk\LivewireTables\Columns\ViewColumn;
 use RamonRietdijk\LivewireTables\Livewire\LivewireTable;
 
 class UsersTable extends LivewireTable
@@ -23,7 +20,9 @@ class UsersTable extends LivewireTable
             Column::make('Role', 'role')->searchable()->sortable(),
             Column::make('Email', 'email')->searchable()->sortable(),
             // Column::make('Last Connection', 'last_connection')->searchable()->sortable(),
-            DateColumn::make(__('Created At'), 'created_at')->searchable()->sortable(),
+            // DateColumn::make(__('Created At'), 'created_at')->searchable()->sortable(),
+            Column::make('Courses', 'courses')->searchable()->sortable(),
+            
             // ViewColumn::make('Actions', 'livewire.table'),
             Column::make(__('Actions'), function (Model $model): string {
                 return "<button class='' onclick=\"Livewire.dispatch('openModal', {component: 'update-user', arguments: {'users': ".$model->getKey()."}})\">Edit</button>
@@ -37,10 +36,9 @@ class UsersTable extends LivewireTable
     {
         return [
             Action::make(__('Delete'), 'delete', function (Enumerable $models): void {
-                $userIds = $models->pluck('id')->toArray(); // Obtener los IDs de los usuarios seleccionados como un array
+                $userIds = $models->pluck('id')->toArray();
                 $this->dispatch('openModal', component: 'delete-user', arguments: ['users' => $userIds]);
-            }),
-            
+            }),            
         ];
     }
 }
