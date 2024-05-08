@@ -13,11 +13,11 @@ class CourseSeeder extends Seeder
     public function run(): void
     {
         $courses = [
-            ['title' => 'M3 - Programming', 'description' => 'DAW Programming 2', 'teacher_id' => 5],
-            ['title' => 'M6 - Web Development in Client Environment', 'description' => 'DAW Web dev client env', 'teacher_id' => 3],
-            ['title' => 'M7 - Web Development in Server Environment', 'description' => 'DAW Web dev server env', 'teacher_id' => 2],
-            ['title' => 'M8 - Web Application Deployment', 'description' => 'DAW Web app deploy', 'teacher_id' => 4],
-            ['title' => 'M9 - Web Interface Design', 'description' => '', 'teacher_id' => 2],
+            ['title' => 'M3 - Programming', 'description' => 'DAW Programming 2'],
+            ['title' => 'M6 - Web Development in Client Environment', 'description' => 'DAW Web dev client env'],
+            ['title' => 'M7 - Web Development in Server Environment', 'description' => 'DAW Web dev server env'],
+            ['title' => 'M8 - Web Application Deployment', 'description' => 'DAW Web app deploy'],
+            ['title' => 'M9 - Web Interface Design', 'description' => 'DAW Web interface Design'],
         ];
 
         foreach ($courses as $course) {

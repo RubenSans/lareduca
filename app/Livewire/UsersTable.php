@@ -21,7 +21,7 @@ class UsersTable extends LivewireTable
             Column::make('Email', 'email')->searchable()->sortable(),
             // Column::make('Last Connection', 'last_connection')->searchable()->sortable(),
             // DateColumn::make(__('Created At'), 'created_at')->searchable()->sortable(),
-            Column::make('Courses', 'courses')->searchable()->sortable(),
+            // Column::make('Courses', 'courses')->searchable()->sortable(),
             
             // ViewColumn::make('Actions', 'livewire.table'),
             Column::make(__('Actions'), function (Model $model): string {
