@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\CourseDetails;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserManagement;
 use App\Livewire\Courses;
@@ -20,16 +21,22 @@ Route::middleware([
 
     // Courses
     Route::get('/courses', Courses::class)->name('courses');
+    
+    // Course Details
+    Route::get('/courses/{courseId}', CourseDetails::class)->name('course-details');
 
     // Lareduca Games
-    // Route::get('/lareduca-games', LareducaGames::class)->name('lareduca-games');
+    Route::get('/lareduca-games')->name('lareduca-games');
 
     // Calendar
-    // Route::get('/calendar', Calendar::class)->name('calendar');
+    Route::get('/calendar')->name('calendar');
 
     // Grades
-    // Route::get('/grades', Grades::class)->name('grades');
+    Route::get('/grades')->name('grades');
 
     // User Management
     Route::get('/user-management', UserManagement::class)->name('user-management');
+
+    // Support
+    Route::get('/support')->name('support');
 });
