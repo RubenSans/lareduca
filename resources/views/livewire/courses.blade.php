@@ -57,21 +57,23 @@
                                             <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs mr-2 truncate" title="{{ $teacher->name }}">{{ $teacher->name }}</span>
                                         @endforeach
                                     </div>
-                                    <x-dropdown>
-                                        <x-slot name="trigger">
-                                            <button type="button" title="Options" class="text-gray-600 hover:text-gray-800 p-2 rounded-xl hover:bg-gray-100">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.25 4C9.25 2.48 10.48 1.25 12 1.25C13.52 1.25 14.75 2.48 14.75 4C14.75 5.52 13.52 6.75 12 6.75C10.48 6.75 9.25 5.52 9.25 4Z" fill="#333333"/>
-                                                    <path d="M9.25 20C9.25 18.48 10.48 17.25 12 17.25C13.52 17.25 14.75 18.48 14.75 20C14.75 21.52 13.52 22.75 12 22.75C10.48 22.75 9.25 21.52 9.25 20Z" fill="#333333"/>
-                                                    <path d="M9.25 12C9.25 10.48 10.48 9.25 12 9.25C13.52 9.25 14.75 10.48 14.75 12C14.75 13.52 13.52 14.75 12 14.75C10.48 14.75 9.25 13.52 9.25 12Z" fill="#333333"/>
-                                                </svg>
-                                            </button>
-                                        </x-slot>
-                                        <x-slot name="content">
-                                            <button wire:click="edit({{ $course->id }})" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit</button>
-                                            <button wire:click="destroy({{ $course->id }})" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Delete</button>
-                                        </x-slot>
-                                    </x-dropdown>
+                                    <a href="#">
+                                        <x-dropdown>
+                                            <x-slot name="trigger">
+                                                <button type="button" title="Options" class="text-gray-600 hover:text-gray-800 p-2 rounded-xl hover:bg-gray-100">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9.25 4C9.25 2.48 10.48 1.25 12 1.25C13.52 1.25 14.75 2.48 14.75 4C14.75 5.52 13.52 6.75 12 6.75C10.48 6.75 9.25 5.52 9.25 4Z" fill="#333333"/>
+                                                        <path d="M9.25 20C9.25 18.48 10.48 17.25 12 17.25C13.52 17.25 14.75 18.48 14.75 20C14.75 21.52 13.52 22.75 12 22.75C10.48 22.75 9.25 21.52 9.25 20Z" fill="#333333"/>
+                                                        <path d="M9.25 12C9.25 10.48 10.48 9.25 12 9.25C13.52 9.25 14.75 10.48 14.75 12C14.75 13.52 13.52 14.75 12 14.75C10.48 14.75 9.25 13.52 9.25 12Z" fill="#333333"/>
+                                                    </svg>
+                                                </button>
+                                            </x-slot>
+                                            <x-slot name="content">
+                                                <button wire:click="edit({{ $course->id }})" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit</button>
+                                                <button wire:click="destroy({{ $course->id }})" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Delete</button>
+                                            </x-slot>
+                                        </x-dropdown>
+                                    </a>
                                 </div>
                             </div>
                         </a>
