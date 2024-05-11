@@ -5,11 +5,15 @@ namespace App\Livewire\Resources;
 use App\Models\Course;
 use App\Models\Resources;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use LivewireUI\Modal\ModalComponent;
+use Livewire\WithFileUploads;
 
 class CreateResource extends ModalComponent
 {
-    public $courseId, $title, $resource_type, $url, $content;
+    use WithFileUploads;
+
+    public $courseId, $title, $resource_type, $file, $content, $path;
     public $course, $resources;
 
     public function mount($courseId)
@@ -20,29 +24,36 @@ class CreateResource extends ModalComponent
 
     public function saveResource()
     {
+        $this->cleanUpUploads();
+
         $this->validate([
             'title' => 'required',
             'resource_type' => 'required',
-            'url' => 'required',
+            'file' => 'required|file|mimes:pdf,doc,docx,xls,xlsx,ppt,pptx,txt|max:10240',
             'content' => 'required',
         ]);
+
+        $this->path = $this->file->store('resources');
 
         Resources::create([
             'course_id' => $this->course->id,
             'title' => $this->title,
             'resource_type' => $this->resource_type,
-            'url' => $this->url,
+            'url' => $this->path,
             'content' => $this->content,
             'uploaded_by' => Auth::user()->id,
         ]);
 
         session()->flash('message', 'Resource created successfully.');
 
-        $this->resources = Resources::where('course_id', $this->course->id)->get();
+        return redirect()->route('courses.course-details', $this->course->id);
+    }
 
-        $this->mount($this->course->id);
+    public function cleanUpUploads()
+    {
+        $storage = Storage::disk('local');
 
-        redirect()->route('course-details', $this->course->id);
+        $storage->deleteDirectory('livewire-tmp');
     }
 
     public function render()

@@ -4,6 +4,7 @@ namespace App\Livewire\Resources;
 
 use App\Models\Course;
 use App\Models\Resources;
+use Illuminate\Support\Facades\Storage;
 use LivewireUI\Modal\ModalComponent;
 
 class DeleteResource extends ModalComponent
@@ -19,10 +20,12 @@ class DeleteResource extends ModalComponent
     public function deleteResource()
     {
         Resources::destroy($this->resource->id);
+        
+        Storage::delete($this->resource->url);
 
         session()->flash('message', 'Resource deleted successfully.');
 
-        redirect()->route('course-details', $this->course->id);
+        redirect()->route('courses.course-details', $this->course->id);
     }
 
     public function render()

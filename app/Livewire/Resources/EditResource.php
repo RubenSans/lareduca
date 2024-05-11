@@ -38,7 +38,7 @@ class EditResource extends ModalComponent
 
         session()->flash('message', 'Resource updated successfully.');
 
-        redirect()->route('course-details', $this->courseId);
+        redirect()->route('courses.course-details', $this->courseId);
     }
 
     public function render()
