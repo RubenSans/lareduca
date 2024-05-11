@@ -1,9 +1,9 @@
 <?php
 
-use App\Livewire\CourseDetails;
 use Illuminate\Support\Facades\Route;
-use App\Livewire\UserManagement;
-use App\Livewire\Courses;
+use App\Livewire\Users\UserManagement as UserManagement;
+use App\Livewire\Courses\Courses as Courses;
+use App\Livewire\Courses\CourseDetails as CourseDetails;
 
 Route::get('/', function () {
     return view('welcome');

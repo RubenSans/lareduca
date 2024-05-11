@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Users;
 
-use Livewire\Component;
 use App\Models\User;
+use Livewire\Component;
 
 class UserManagement extends Component
 {
@@ -13,9 +13,9 @@ class UserManagement extends Component
     {
         $this->users = User::all();
     }
-    
+
     public function render()
     {
-        return view('livewire.user-management');
+        return view('livewire.users.user-management');
     }
 }
