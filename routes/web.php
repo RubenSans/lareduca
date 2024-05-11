@@ -23,7 +23,7 @@ Route::middleware([
     Route::get('/courses', Courses::class)->name('courses');
     
     // Course Details
-    Route::get('/courses/{courseId}', CourseDetails::class)->name('course-details');
+    Route::get('/courses/{courseId}', CourseDetails::class)->name('courses.course-details');
 
     // Lareduca Games
     Route::get('/lareduca-games')->name('lareduca-games');

@@ -26,7 +26,9 @@
     <x-banner />
     
     <div :class="{'sm:ml-[280px]': ! close, 'left-0': close}" class="min-h-screen sm:ml-[280px] transition-all duration-300">
-        @livewire('navigation-menu')        
+        <div class="sticky top-0">
+            @livewire('navigation-menu')
+        </div>
 
         <!-- Page Content -->
         @livewire('SidebarNavigation')

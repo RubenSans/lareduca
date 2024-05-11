@@ -19,8 +19,8 @@ class Resources extends Model
         'uploaded_by',
     ];
 
-    public function course()
-    {
-        return $this->belongsTo(Courses::class);
-    }
+    // public function course()
+    // {
+    //     return $this->belongsTo(Courses::class);
+    // }
 }
