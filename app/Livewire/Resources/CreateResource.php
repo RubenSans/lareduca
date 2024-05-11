@@ -24,8 +24,6 @@ class CreateResource extends ModalComponent
 
     public function saveResource()
     {
-        $this->cleanUpUploads();
-
         $this->validate([
             'title' => 'required',
             'resource_type' => 'required',
@@ -46,6 +44,8 @@ class CreateResource extends ModalComponent
 
         session()->flash('message', 'Resource created successfully.');
 
+        $this->cleanUpUploads();
+        
         return redirect()->route('courses.course-details', $this->course->id);
     }
 
