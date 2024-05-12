@@ -5,6 +5,7 @@
         @if (session('message'))
             @livewire('alert-message')
         @endif
+        <!-- Courses Teacher and Admin -->
         @if(Auth::user()->isTeacher() || Auth::user()->isAdmin())
             <div class="flex justify-end gap-4">
                 <x-button-add wire:click="create">
@@ -80,6 +81,7 @@
                     </div>
                 @endforeach
             </div>
+        <!-- Courses Student -->
         @else
             <h2 class="text-xl font-semibold">Enrolled Courses</h2>
             @if($enrolledCourses->isEmpty())

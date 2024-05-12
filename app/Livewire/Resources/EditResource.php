@@ -3,11 +3,16 @@
 namespace App\Livewire\Resources;
 
 use App\Models\Resources;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Livewire\WithFileUploads;
 use LivewireUI\Modal\ModalComponent;
 
 class EditResource extends ModalComponent
 {
-    public $resource, $courseId, $title, $resource_type, $url, $content;
+    use WithFileUploads;
+
+    public $resource, $courseId, $title, $resource_type, $file, $url, $content, $path;
 
     public function mount($resourceId)
     {
@@ -22,24 +27,40 @@ class EditResource extends ModalComponent
 
     public function updateResource()
     {
-        $this->validate([
+        $rules = [
             'title' => 'required',
             'resource_type' => 'required',
-            'url' => 'required',
             'content' => 'required',
-        ]);
+        ];
 
-        Resources::where('id', $this->resource->id)->update([
+        if ($this->file) {
+            $rules['file'] = 'file|mimes:pdf,doc,docx,xls,xlsx,ppt,pptx,txt|max:10240';
+        }
+
+        $this->validate($rules);
+
+        $resourceData = [
             'title' => $this->title,
             'resource_type' => $this->resource_type,
-            'url' => $this->url,
             'content' => $this->content,
-        ]);
+            'uploaded_by' => Auth::user()->id,
+        ];
+
+        if ($this->file) {
+            $resourceData['url'] = $this->file->store('public/resources');
+        }
+
+        Resources::where('id', $this->resource->id)->update($resourceData);
+
+        if ($this->file) {
+            Storage::delete($this->resource->url);
+        }
 
         session()->flash('message', 'Resource updated successfully.');
 
-        redirect()->route('courses.course-details', $this->courseId);
+        return redirect()->route('courses.course-details', $this->courseId);
     }
+
 
     public function render()
     {

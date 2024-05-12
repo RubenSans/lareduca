@@ -1,7 +1,7 @@
 <div>
     <div class="relative bg-white rounded-lg max-w-md p-6">
         <div class="flex justify-between items-center border-b border-gray-200 pb-4 mb-4">
-            <h2 class="text-lg font-semibold">Borrar el recurso con el id: {{ $resource->id }}</h2>  
+            <h2 class="text-lg font-semibold">Borrar el recurso con el nombre: {{ $resource->title }}</h2>  
         </div>
         <div class="mb-6">
             <p class="text-gray-700">Estas seguro de querer borrar el recurso?</p>
