@@ -31,7 +31,7 @@ class CreateResource extends ModalComponent
             'content' => 'required',
         ]);
 
-        $this->path = $this->file->store('resources');
+        $this->path = $this->file->store('public/resources');
 
         Resources::create([
             'course_id' => $this->course->id,
