@@ -32,7 +32,7 @@
                     @else
                         @foreach ($course->resources as $resource)
                             <li class="flex justify-between items-center hover:bg-slate-200 p-2 rounded-xl">
-                                <a href="{{ Storage::url($resource->url) }}" target="_blank" class="flex flex-col gap-4 items-center">
+                                <a href="{{ Storage::url($resource->url) }}" target="_blank" class="flex flex-col gap-4">
                                     <div class="flex items-center gap-4">
                                         @switch($resource->resource_type)
                                             @case('ppt')
@@ -46,8 +46,7 @@
                                         @endswitch
                                         <p>{{ $resource->title }}</p>
                                     </div>
-                                    <p>{{ $resource->created_at->addWeek()->diffForHumans() }}</p>
-                                    <!-- <p>{{ $resource->created_at->diffForHumans() }}</p> -->
+                                    <p class="pl-2">{{ $resource->created_at->diffForHumans() }}</p>
                                 </a>
                                 @if(Auth::user()->isTeacher() || Auth::user()->isAdmin())
                                     <div>
