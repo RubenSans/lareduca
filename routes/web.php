@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Users\UserManagement as UserManagement;
 use App\Livewire\Courses\Courses as Courses;
 use App\Livewire\Courses\CourseDetails as CourseDetails;
+use App\Livewire\EducationalGames;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,8 +26,8 @@ Route::middleware([
     // Course Details
     Route::get('/courses/{courseId}', CourseDetails::class)->name('courses.course-details');
 
-    // Lareduca Games
-    Route::get('/lareduca-games')->name('lareduca-games');
+    // Educational Games
+    Route::get('/educational-games', EducationalGames::class)->name('educational-games');
 
     // Calendar
     Route::get('/calendar')->name('calendar');

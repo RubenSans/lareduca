@@ -24,9 +24,9 @@
                     Courses
                 </li>
             </a>
-            <a href="{{ route('lareduca-games') }}" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
+            <a href="{{ route('educational-games') }}" class="hover:text-blue-600 hover:fill-blue-600 leading-[30px] font-medium text-[16px]">
                 <li
-                    class="{{ Str::startsWith(request()->url(), route('lareduca-games')) ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
+                    class="{{ Str::startsWith(request()->url(), route('educational-games')) ? 'bg-blue85 text-white fill-white' : 'bg-blue15 text-black33 fill-black33 hover:text-blue-600 hover:fill-blue-600 '}} flex items-center gap-1 my-3 p-2 rounded-[8px]">
                     <svg class="mx-2 hover:fill-blue-600" width="20" height="20" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
